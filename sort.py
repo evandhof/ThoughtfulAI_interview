@@ -1,4 +1,5 @@
 from enum import Enum
+from package import Package
 
 BULKY_VOLUME = 1000000
 BULKY_DIMENSION = 150
@@ -41,3 +42,5 @@ def sort(width: float, height: float, length: float, mass: float) -> str:
         return Stack.SPECIAL.value 
 
 
+def sort_package(package: Package):
+    return sort(package.width, package.height, package.length, package.mass)
